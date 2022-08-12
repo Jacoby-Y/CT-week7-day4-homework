@@ -11,5 +11,8 @@
   "dependencies": {
     "apisauce": "^2.1.5",
     "base-64": "^1.0.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
