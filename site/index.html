@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> -->
+
+    <link rel="stylesheet" href="./index.css">
+    <script defer src="./index.js"></script>
+
+    <title>Dice Thang</title>
+</head>
+<body class="flex-center">
+    <div class="container p-5 flex-center flex-column" id="post-game-wrapper" winner="">
+        <h1 class="text-primary" id="one">Player 1 Won!</h1>
+        <h1 class="text-danger" id="two">Player 2 Won!</h1>
+        <button class="btn btn-success mt-3" onclick="resetGame()">Play Again</button>
+    </div>
+    <div class="container h-100 flex-center p-5 d-flex flex-column" id="main-wrapper">
+        <div id="player-text-wrapper">
+            <div>
+                <h1 class="text-primary" id="player-1-txt">Player 1: <b>0</b></h1>
+            </div>
+            <div>
+                <h1 class="text-danger" id="player-2-txt">Player 2: <b>0</b></h1>
+            </div>
+        </div>
+        <button class="btn btn-light text-primary border-primary mt-3" id="roll-btn">Roll Dice</button>
+        <div id="dice-area-1" class="d-flex"> </div>
+        <div id="dice-area-2" class="d-flex"> </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@font-face {
+    font-display: block;
+    font-family: "bootstrap-icons";
+    src: url("./bootstrap-icons.woff2") format("woff2"),
+    url("./bootstrap-icons.woff") format("woff");
+}
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: "bootstrap-icons" !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    user-select: none;
+    min-height: 100vh;
+}
+.dice {
+    font-size: 5rem;
+    font-weight: bold;
+    padding: 1rem;
+    display: inline !important;
+}
+button:disabled {
+    opacity: 0.7;
+    pointer-events: none;
+}
+#player-text-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#player-text-wrapper > div {
+    display: flex;
+    justify-content: center;
+}
+button {
+    font-size: 2rem !important;
+}
+
+#post-game-wrapper[winner=""], #post-game-wrapper:not([winner=""]) ~ #main-wrapper {
+    display: none !important;
+}
+#post-game-wrapper[winner="one"] {
+    display: flex;
+}
+#post-game-wrapper[winner="two"] {
+    display: flex;
+}
+#post-game-wrapper h1 {
+    display: none;
+}
+#post-game-wrapper[winner="one"] h1#one {
+    display: block;
+}
+#post-game-wrapper[winner="two"] h1#two {
+    display: block;
+}
+
+#dice-area-1, #dice-area-2 {
+    min-height: 152px;
+}
+#dice-area-2 {
+    margin-top: -3rem;
+}
+
+.flex-center {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-dice-1::before { content: "\f2f3"; }
+.bi-dice-2::before { content: "\f2f5"; }
+.bi-dice-3::before { content: "\f2f7"; }
+.bi-dice-4::before { content: "\f2f9"; }
+.bi-dice-5::before { content: "\f2fb"; }
+.bi-dice-6::before { content: "\f2fd"; }
